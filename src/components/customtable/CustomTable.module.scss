@@ -1,0 +1,125 @@
+@import '../../styles/variables';
+
+.customTable {
+  overflow-x: auto;
+  width: 100%;
+  table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    th {
+      background: $table-head-background;
+      box-shadow: inset 0 -0.5px 0 $field-placeholder-color;
+      color: $table-head-color;
+      font-size: 0.75rem;
+      height: 2rem;
+      padding: 0.5rem;
+      text-align: left;
+      text-transform: uppercase;
+    }
+    tr {
+      > {
+        :first-child {
+          padding-left: 1.25rem;
+        }
+        :last-child {
+          padding-right: 1rem;
+        }
+      }
+    }
+    tbody {
+      tr.showDivider {
+        box-shadow: inset 0 -0.5px 0 $field-placeholder-color;
+      }
+      tr {
+        height: 3.25rem;
+        &.showRowHover:hover {
+          background-color: $menu-item-hover-background;
+          td {
+            color: $menu-item-hover-color;
+          }
+        }
+      }
+    }
+    td {
+      color: var(--primary-title-text-color);
+      padding: 0.5rem;
+    }
+  }
+  .iconHover {
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid var(--primary-error-color);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .deleteIcon {
+    height: 1.6rem;
+    min-width: 1.5rem;
+    width: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover,
+    &:active {
+      @extend .iconHover;
+    }
+    &:active {
+      background-color: var(--primary-error-color);
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+
+  .customIcon {
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    min-width: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover,
+    &:active {
+      height: 1.5rem !important;
+      width: 1.5rem !important;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 1px solid var(--secondary-btn-border-color);
+    }
+    &:active {
+      background-color: var(--secondary-btn-border-color);
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+  .editIcon,
+  .activateIcon {
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    min-width: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    &:hover,
+    &:active {
+      @extend .iconHover;
+      border: 1px solid var(--secondary-btn-border-color);
+    }
+    &:active {
+      background-color: var(--secondary-btn-border-color);
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+
+  .paginationWrapper {
+    padding: 1.25rem 1.25rem 0;
+  }
+}

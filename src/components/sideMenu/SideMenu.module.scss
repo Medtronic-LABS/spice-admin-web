@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.sideMenu {
+  width: 240px;
+  background-color: var(--white);
+  border-radius: 0.75rem;
+  border: 0.5px solid $side-menu-border;
+  .menuItem {
+    border-inline-start: 0.25rem solid var(--white);
+    &:hover {
+      border-inline-start-color: $menu-item-hover-background;
+      background-color: $menu-item-hover-background;
+      color: $menu-item-active-color;
+    }
+    &:active {
+      color: var(--white);
+      background-color: $menu-item-active-color;
+      border-inline-start-color: $menu-item-active-color;
+    }
+    &.selected {
+      font-weight: 700;
+      pointer-events: none;
+      border-inline-start: 0.25rem solid var(--medium-blue-60) !important;
+      color: $menu-item-active-color;
+    }
+    &.showMore {
+      color: $menu-item-active-color;
+      &:active {
+        color: var(--white);
+      }
+    }
+  }
+}

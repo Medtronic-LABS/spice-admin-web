@@ -1,0 +1,159 @@
+@import '../../styles/variables';
+
+.checkboxWrapper {
+  height: 1rem;
+  width: 1rem;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  .checkbox {
+    cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+    &:checked {
+      &::after {
+        content: '\2714';
+        background: var(--checkbox-selection-color);
+        border: none;
+      }
+    }
+    &:not(:checked) {
+      &::after {
+        padding-top: 9px;
+      }
+    }
+    &:focus {
+      &::after {
+        border: 0.063rem solid $field-focus-border-color !important;
+      }
+    }
+    &::after {
+      top: 0;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      border: 0.063rem solid var(--secondary-btn-text-color);
+      border-radius: 0.25rem;
+      content: '';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: var(--white);
+      color: var(--white);
+      overflow: hidden;
+      padding-left: 0.063rem; // to make the tick looks centered
+    }
+  }
+}
+.checkboxLabel {
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: $field-label-color;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  &:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+  &.checkboxGroupLabel {
+    height: 2.5rem;
+  }
+  .checkboxLabelText {
+    margin-right: 0.875rem;
+  }
+  &.disabled {
+    pointer-events: none;
+    .checkbox {
+      &::after {
+        background-color: var(--disabled-btn-color);
+      }
+    }
+  }
+}
+.error {
+  padding-left: 0.063rem;
+  padding-top: 0.063rem;
+  font-size: 0.85rem;
+  min-height: 1.5rem;
+  color: $field-error-color;
+}
+
+.clSwitch {
+  input[type='checkbox'] {
+    display: none;
+    visibility: hidden;
+  }
+
+  .switcher {
+    display: inline-block;
+    border-radius: 6.25rem;
+    width: 2.375rem;
+    height: 0.9375rem;
+    background-color: var(--checkbox-un-selected-bar-color);
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 1.25rem;
+      height: 1.25rem;
+      background-color: var(--checkbox-un-selected-circle-color);
+      box-shadow: 0 0.23rem 0.988rem rgba(var(--black-rgb), 0.6);
+      border-radius: 50%;
+      margin-top: -0.156rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-right: 0;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    &:active:before {
+      box-shadow: 0 0.43rem 0.288rem, 0 0 0 0.625rem var(--medium-blue-20);
+      transition: all, 0.1s;
+    }
+  }
+
+  /*
+  When Checked
+   */
+  input[type='checkbox']:checked + .switcher {
+    background-color: var(--medium-blue-20);
+
+    &:before {
+      left: 100%;
+      margin-left: -1.25rem;
+      background-color: var(--checkbox-selection-color);
+    }
+  }
+
+  & [disabled]:not([disabled='false']) + .switcher {
+    background: var(--checkbox-un-selected-bar-color);
+    cursor: not-allowed;
+
+    &:active:before {
+      box-shadow: 0 0.43rem 0.288rem 0 rgba(var(--black-rgb), 0.2);
+    }
+
+    &:before {
+      background-color: var(--disabled-btn-color);
+      box-shadow: 0 0.43rem 0.288rem 0 rgba(var(--black-rgb), 0.2);
+    }
+  }
+}

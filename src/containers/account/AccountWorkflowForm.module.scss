@@ -1,0 +1,9 @@
+@import '../../styles/variables';
+
+.error {
+  padding-left: 1px;
+  padding-top: 1px;
+  font-size: 0.85rem;
+  min-height: 1.5rem;
+  color: $field-error-color;
+}

@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.label {
+  margin-bottom: 0.5rem;
+  color: $field-label-color;
+  line-height: 1.25rem;
+  padding-left: 1px;
+}
+
+.deleteIcon {
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}

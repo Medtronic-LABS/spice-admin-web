@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+@import '../../styles/theme';
+
+.breadcrumb {
+  @extend .subtle-color;
+  min-height: 2.25rem;
+  .homeIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--medium-blue);
+    border-radius: 50%;
+    img {
+      width: 0.875rem;
+      height: 0.75rem;
+    }
+    &:hover {
+      background-color: $icon-hover-background-color;
+    }
+    &:active {
+      background: var(--medium-blue);
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+  .breadcrumbLink {
+    transition: font-size 0.1s, color 0.1s;
+    &:hover {
+      @extend .primary-title;
+    }
+    &.active {
+      color: var(--primary-title-text-color);
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@import './variables';
+@import './theme';
+
+.select-field__menu--generic {
+  @extend .highlight-small-text;
+  border: 0.3px solid $dropdown-border-color !important;
+  box-shadow: 0px 4px 8px $dropdown-box-shadow !important;
+  overflow: hidden !important;
+  border-radius: 0.5rem !important;
+  .select-field__option {
+    padding: 0.625rem 1rem !important;
+    &:hover:not(.select-field__option--is-selected) {
+      background-color: $dropdown-item-hover-background-color !important;
+      color: $dropdown-item-hover-color !important;
+    }
+    &.select-field__option--is-focused:not(.select-field__option--is-selected) {
+      color: $dropdown-item-hover-color !important;
+    }
+    &.select-field__option--is-selected {
+      background-color: var(--medium-blue) !important;
+      color: var(--white) !important;
+    }
+  }
+}
+.select-field {
+  .select-field__control {
+    min-height: 2.5rem !important;
+    border-color: $field-border-color !important;
+    &:hover {
+      border-color: $field-focus-border-color !important;
+    }
+    &.select-field__control--is-focused {
+      border-color: $field-focus-border-color !important;
+      box-shadow: inset 0px 4px 8px $field-focus-box-shadow-color !important;
+    }
+    &.select-field__control--is-disabled {
+      pointer-events: auto;
+      cursor: not-allowed;
+      background-color: $field-deactivate-color;
+      &:hover {
+        border-color: $field-border-color;
+      }
+    }
+    .select-field__input-container .select-field__input,
+    .select-field__single-value {
+      color: $field-text-color !important;
+      font-size: 0.875rem !important;
+    }
+    .select-field__indicator-separator {
+      display: none !important;
+    }
+    .select-field__placeholder {
+      font-size: 0.875rem !important;
+      color: $field-placeholder-color;
+    }
+  }
+  &.danger {
+    .select-field__control--is-focused,
+    .select-field__control {
+      border-color: $field-error-color !important;
+    }
+  }
+  .select-field__menu {
+    @extend .select-field__menu--generic;
+  }
+}
+.select-field__menu-portal {
+  .select-field__menu {
+    @extend .select-field__menu--generic;
+  }
+}
+
+.pagination-select {
+  @extend .select-field;
+  .select-field__control {
+    min-height: 2.125rem !important;
+    min-width: 4rem !important;
+  }
+  .select-field__indicator {
+    padding: 5px 4px !important;
+  }
+  .select-field__input-container {
+    margin-bottom: 1px !important;
+  }
+  .select-field__menu {
+    width: unset !important;
+  }
+}

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReorderModel component should render correctly 1`] = `ReactWrapper {}`;
+
+exports[`ReorderModel component should render when family name is given 1`] = `ReactWrapper {}`;

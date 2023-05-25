@@ -1,0 +1,50 @@
+// Input field variables
+$field-label-color: var(--black-65);
+$field-text-color: var(--black);
+$field-border-color: rgba(var(--black-rgb), 0.4);
+$field-focus-border-color: var(--black-65);
+$field-focus-box-shadow-color: rgba(var(--black-rgb), 0.1);
+$field-placeholder-color: rgba(var(--black-rgb), 0.4);
+$field-error-color: var(--red);
+$field-deactivate-color: var(--off-white);
+
+// Icons
+$icon-hover-background-color: var(--medium-blue-3);
+
+// text color
+$link-text-color: var(--medium-blue);
+$privacy-text-color: var(--black);
+
+// background
+$primary-background: var(--medium-blue-3);
+
+// loader
+$loader-color: var(--medium-blue);
+$loader-background: var(--light-grey-blur);
+
+// dropdown
+$dropdown-toggler-light-hover-color: var(--medium-blue-3);
+$dropdown-item-hover-background-color: var(--medium-blue-3);
+$dropdown-item-hover-color: var(--medium-blue);
+$dropdown-border-color: var(--black-30);
+$dropdown-box-shadow: 0px 8px 16px rgba(83, 86, 90, 0.2);
+
+// header height
+$app-navbar-height: 4.125rem;
+
+// main content
+$main-content-max-width: 1280px;
+//table
+$table-head-background: var(--off-white);
+$table-head-color: var(--black-45);
+
+// side menu
+$side-menu-border: var(--black-30);
+$menu-item-hover-background: var(--medium-blue-3);
+$menu-item-active-color: var(--medium-blue);
+$menu-item-hover-color: var(--medium-blue-60);
+//modal
+$modal-background: rgba(var(--black-rgb), 0.8);
+
+//divider
+$divider-background-color: var(--black-30);

@@ -1,0 +1,51 @@
+@import '../../styles/variables';
+
+$user-logo-background: var(--burnt-orange);
+$user-options-hover-background-color: var(--medium-blue-3);
+$dropdown-item-hover-background: var(--medium-blue-3);
+
+.appNavbar {
+  height: $app-navbar-height;
+  padding-top: 0.1875rem;
+  padding-bottom: 0.1875rem;
+  .navbarLogo {
+    margin-top: 0.25rem;
+  }
+  .userOptions {
+    border-radius: 0.5rem;
+    &:hover {
+      background-color: $user-options-hover-background-color;
+    }
+    .userLogo {
+      background: $user-logo-background;
+      border-radius: 50%;
+      width: 2.25rem;
+      height: 2.25rem;
+      color: var(--white);
+    }
+    .name {
+      max-inline-size: 300px; // 32 character
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .navbarDropdown {
+    min-width: 11rem;
+    .navbarDropdownItem {
+      &:hover {
+        .iconWrapper {
+          img {
+            filter: none;
+          }
+        }
+      }
+      .iconWrapper {
+        width: 1rem;
+        height: 1rem;
+        img {
+          filter: brightness(0.3);
+        }
+      }
+    }
+  }
+}

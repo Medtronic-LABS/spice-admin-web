@@ -1,0 +1,7 @@
+.dropdownButton {
+  border: none;
+  border-radius: 0.25rem;
+  &::after {
+    display: none;
+  }
+}

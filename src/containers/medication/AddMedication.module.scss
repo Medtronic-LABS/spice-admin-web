@@ -1,0 +1,71 @@
+@import '../../styles/variables';
+
+$divider-background-color: var(--black-30);
+
+.addMedicationContainer {
+  min-height: 100%;
+  .addMedicationWrapper {
+    max-width: $main-content-max-width;
+    .homeIcon {
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 1px solid var(--medium-blue);
+      border-radius: 50%;
+      img {
+        width: 0.875rem;
+        height: 0.75rem;
+      }
+      &:hover {
+        background-color: $icon-hover-background-color;
+      }
+      &:active {
+        background: var(--medium-blue);
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      position: absolute;
+      @media (max-width: 991px) {
+        bottom: 1rem;
+        width: 100%;
+        justify-content: space-between !important;
+      }
+      @media (min-width: 992px) {
+        right: 0.5rem;
+      }
+    }
+    .actionIcons {
+      @extend .icon;
+    }
+    @media (min-width: 992px) {
+      .actionIcons {
+        top: 1.3rem;
+        flex-flow: column;
+      }
+      .actionIconTop {
+        top: 2.3rem;
+      }
+    }
+    @media (max-width: 991px) {
+      .actionIcons {
+        flex-flow: row;
+      }
+    }
+    .updateIcons {
+      @extend .icon;
+      @media (max-width: 991px) {
+        flex-flow: row;
+      }
+      @media (min-width: 992px) {
+        flex-flow: column;
+        top: 1rem;
+      }
+    }
+  }
+}

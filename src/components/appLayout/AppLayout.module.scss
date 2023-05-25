@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+
+$menu-icon-color: var(--medium-blue-60);
+$menu-icon-color-opac: var(--medium-blue-60);
+$menu-icon-active-color: var(--white);
+$menu-box-shadow: 0px 8px 16px rgba(83, 86, 90, 0.2);
+
+.layout {
+  min-height: 100%;
+  .contentCenter {
+    max-width: $main-content-max-width;
+    width: 100%;
+  }
+  .header {
+    margin: 0 -2.25rem;
+    .menuIcon {
+      width: 2.25rem;
+      padding: 0.437rem;
+      border-radius: 4px;
+      cursor: pointer;
+
+      div {
+        height: 0.25rem;
+        border-radius: 4px;
+        background-color: $menu-icon-color;
+        &:not(:last-child) {
+          margin-bottom: 0.2rem;
+        }
+      }
+      &:hover {
+        background-color: $menu-icon-color-opac;
+      }
+      &.visible {
+        background-color: $menu-icon-color;
+        div {
+          background-color: $menu-icon-active-color;
+        }
+      }
+    }
+  }
+  .body {
+    display: flex;
+    flex-wrap: nowrap;
+    .sidemenu {
+      &.togglable {
+        .customSidemenuClass {
+          max-height: calc(100vh - #{$app-navbar-height} - 4.125rem);
+          overflow: auto;
+        }
+        border-radius: 0.75rem;
+        padding: 0 !important;
+        position: absolute;
+        box-shadow: $menu-box-shadow;
+        top: 2rem;
+        left: 6.5rem;
+        z-index: 1;
+        &:not(.visible) {
+          display: none;
+        }
+      }
+    }
+  }
+}

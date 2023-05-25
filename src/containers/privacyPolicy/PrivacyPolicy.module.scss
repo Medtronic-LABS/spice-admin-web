@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+
+.privacyContainer {
+  background-color: $primary-background;
+  padding: 1.25rem 1.5rem;
+
+  .privacyTitle {
+    font-size: 3.125rem;
+    font-weight: 500;
+    color: $link-text-color;
+  }
+
+  .logo {
+    float: right;
+    height: 4.375rem;
+  }
+
+  .privacyHeader {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: $link-text-color;
+  }
+
+  .privacyText {
+    color: $privacy-text-color;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}

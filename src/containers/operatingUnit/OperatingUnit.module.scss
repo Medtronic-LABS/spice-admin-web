@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+$load-more-btn-height: 2.678rem;
+$no-data-message-background-color: var(--white);
+$no-data-message-border-color: var(--black-30);
+
+.loaderWrapper {
+  // height of loader and load more button should be same to prevent UI flickering
+  // since these the elements are shown and hidden at same time
+  height: $load-more-btn-height;
+}
+.noData {
+  background-color: $no-data-message-background-color;
+  border-radius: 0.75rem;
+  border: 1px solid $no-data-message-border-color;
+}
+.ouSummaryTitle {
+  @media (max-width: 1130px) and (min-width: 998px) {
+    max-width: 4rem;
+  }
+}

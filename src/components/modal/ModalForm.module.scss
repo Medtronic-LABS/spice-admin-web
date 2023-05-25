@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.modal {
+  display: block;
+  background-color: $modal-background;
+  .modalWidth {
+    max-width: 620px;
+  }
+  .modalContent {
+    border-radius: 0.75rem;
+    .modalTitle {
+      line-height: 1.625rem;
+      color: $field-text-color;
+    }
+    .closeIcon {
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      border-radius: 0.25rem;
+      img {
+        width: 0.75rem;
+        height: 0.75rem;
+      }
+      &:hover {
+        background-color: $icon-hover-background-color;
+        cursor: pointer;
+      }
+      &:active {
+        background-color: var(--medium-blue);
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+  .scroll {
+    overflow-y: auto;
+    max-height: 60vh;
+  }
+}

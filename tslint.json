@@ -1,0 +1,41 @@
+{
+    "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+    "defaultSeverity": "error",
+    "linterOptions": {
+      "exclude": ["config/**/*.js", "node_modules/**/*.ts", "node_modules/**/*.js"]
+    },
+    "rules": {
+      "variable-name": {
+        "options": ["ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"]
+      },
+      "no-trailing-whitespace": true,
+      "no-conditional-expect": false,
+      "quotemark": [true, "single"],
+      "eofline": true,
+      "jsx-no-lambda": false,
+      "trailing-comma": [true, { "multiline": "never", "singleline": "never" }],
+      "semicolon": [true, "always", "ignore-bound-class-methods"],
+      "whitespace": [
+        true,
+        "check-branch",
+        "check-decl",
+        "check-operator",
+        "check-module",
+        "check-separator",
+        "check-rest-spread",
+        "check-type",
+        "check-typecast",
+        "check-type-operator",
+        "check-preblock"
+      ],
+      "indent": [true, "spaces", 2],
+      "no-console": [true, "log", "debug", "info", "time", "timeEnd", "trace"],
+      "max-line-length": [true, 120],
+      "no-consecutive-blank-lines": false,
+      "no-var-requires": true,
+      "object-literal-sort-keys": false,
+      "ordered-imports": false,
+      "member-access": false
+    }
+  }
+  

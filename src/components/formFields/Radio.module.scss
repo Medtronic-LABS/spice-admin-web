@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+
+$radio-color: var(--medium-blue-60);
+
+.radioContainer {
+  line-height: 1.375rem;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: $field-label-color;
+  &:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  .radioWrapper {
+    width: 0.875rem;
+    height: 0.875rem;
+    border-radius: 50%;
+    input {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      &::after {
+        cursor: pointer;
+        content: '';
+        display: block;
+        width: 101%;
+        height: 101%;
+        border-radius: 50%;
+        border: 1px solid $radio-color;
+        background-color: var(--white);
+      }
+      &:checked {
+        &::after {
+          border-width: 2px;
+          background: radial-gradient($radio-color 45%, var(--white) 1%, var(--white) 44%);
+        }
+      }
+    }
+  }
+}
+.error {
+  padding-left: 1px;
+  font-size: 0.85rem;
+  min-height: 1.5rem;
+  color: $field-error-color;
+}
+.radioInputEnclosure {
+  min-height: 92px;
+}

@@ -1,0 +1,131 @@
+@import './variables';
+
+// Bootstrap overrides
+
+// theme overrides
+$primary: #2514be;
+$success: #00a372;
+$danger: #e31b28;
+$light: #fff;
+
+// spacing overrides
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 1,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+  6: $spacer * 6,
+  7: $spacer * 7,
+  8: $spacer * 8,
+  9: $spacer * 9,
+  10: $spacer * 10,
+  // special cases
+  '0dot125': $spacer * 0.125,
+  '0dot25': $spacer * 0.25,
+  '0dot375': $spacer * 0.375,
+  '0dot5': $spacer * 0.5,
+  '0dot625': $spacer * 0.625,
+  '0dot75': $spacer * 0.75,
+  '0dot875': $spacer * 0.875,
+  '1dot125': $spacer * 1.125,
+  '1dot25': $spacer * 1.25,
+  '1dot375': $spacer * 1.375,
+  '1dot5': $spacer * 1.5,
+  '1dot75': $spacer * 1.75,
+  '1dot875': $spacer * 1.875,
+  '2dot25': $spacer * 2.25,
+  '2dot5': $spacer * 2.5,
+  '2dot75': $spacer * 2.75,
+  '3dot125': $spacer * 3.125,
+  '3dot75': $spacer * 3.75,
+  // negative
+  neg-1dot25: -$spacer * 1.25,
+  neg-2dot75: -$spacer * 2.75
+);
+
+$grid-gutter-width: 1.5rem;
+$gutters: (
+  0: 0,
+  1: $spacer * 1,
+  2: $spacer * 2,
+  3: $spacer,
+  4: $spacer * 3,
+  5: $spacer * 4,
+  // special cases
+  '0dot625': $spacer * 0.625,
+  '1dot25': $spacer * 1.25
+);
+
+@import 'bootstrap/scss/bootstrap';
+
+.dropdown-menu {
+  border: 0.3px solid $dropdown-border-color;
+  box-shadow: 0px 4px 8px $dropdown-box-shadow;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.dropdown-toggle {
+  &.show {
+    img {
+      transform: rotate(180deg);
+    }
+    &.light {
+      background-color: $dropdown-toggler-light-hover-color;
+    }
+    &.primary-btn {
+      background-color: var(--primary-btn-active-background);
+    }
+  }
+  &::after {
+    display: none !important;
+  }
+}
+
+.dropdown-item {
+  padding: 0.625rem 1rem !important;
+  &:hover {
+    background-color: $dropdown-item-hover-background-color !important;
+    color: $dropdown-item-hover-color !important;
+  }
+}
+
+.pagination-dropdown {
+  &.dropdown-menu {
+    min-width: unset !important;
+  }
+}
+
+.modal-footer > * {
+  margin: 0 !important;
+}
+
+.accordion-button {
+  color: var(--primary-title-text-color) !important;
+  &:focus {
+    border-color: none !important;
+    box-shadow: none !important;
+  }
+}
+.accordion {
+  .accordion-item {
+    border: 1px solid $field-border-color;
+    &:last-of-type {
+      border-bottom-right-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+    &:first-of-type {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      .accordion-button {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+      }
+    }
+  }
+}

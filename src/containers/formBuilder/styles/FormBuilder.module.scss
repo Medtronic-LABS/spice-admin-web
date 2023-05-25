@@ -1,0 +1,187 @@
+@import '../../../styles/variables';
+
+.fieldContainer {
+  background-color: var(--white);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.body {
+  height: calc(100vh - #{$app-navbar-height} - 7.375em);
+}
+
+.error {
+  padding-left: 1px;
+  padding-top: 1px;
+  font-size: 0.85rem;
+  min-height: 1.5rem;
+  color: $field-error-color;
+}
+
+.danger {
+  border: 1px solid $field-error-color !important;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  color: $field-label-color;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  padding-left: 1px;
+}
+
+.optionsList {
+  display: table;
+  width: 100%;
+}
+
+.editBtnImg {
+  filter: brightness(0) invert(1);
+  margin-right: 0.4375rem;
+}
+
+.sideMenu {
+  width: 240px;
+  background-color: var(--white);
+  border-radius: 0.75rem;
+  border-style: solid;
+  border-color: $side-menu-border;
+  border-width: 1px;
+  max-height: calc(100vh - #{$app-navbar-height} - 7.375em - 2.875rem);
+  overflow: auto;
+  .menuItem {
+    border-inline-start: 0.25rem solid var(--white);
+    &:hover {
+      border-inline-start-color: $menu-item-hover-background;
+      background-color: $menu-item-hover-background;
+      color: $menu-item-active-color;
+    }
+    &:active {
+      color: var(--white);
+      background-color: $menu-item-active-color;
+      border-inline-start-color: $menu-item-active-color;
+    }
+    &.selected {
+      font-weight: 700;
+      pointer-events: none;
+      border-inline-start: 0.25rem solid $menu-item-active-color !important;
+      color: $menu-item-active-color;
+    }
+  }
+}
+
+.addNew {
+  color: $menu-item-active-color;
+  border-style: solid;
+  border-color: $side-menu-border;
+  border-width: 1px;
+  border-radius: 0.75rem;
+  &:hover {
+    background-color: $menu-item-hover-background;
+    color: $menu-item-active-color;
+  }
+}
+.input {
+  width: 100%;
+}
+.tagInput {
+  max-height: 120px;
+  min-height: 92px;
+  .taginputContainer {
+    border: 1px solid $field-border-color;
+    padding: 5px;
+    border-radius: 5px;
+    max-height: 100px;
+    overflow-y: auto;
+    .items {
+      display: inline-block;
+      padding: 2px 5px;
+      border-radius: 0.25rem;
+      box-sizing: border-box;
+      margin: 2px;
+      cursor: pointer;
+      background-color: $field-deactivate-color;
+      font-size: 0.875rem;
+    }
+    .disabledItems {
+      border: 1px solid $field-border-color;
+    }
+
+    input {
+      outline: none;
+      border: none;
+      font-size: 0.875rem;
+    }
+  }
+}
+.disabledContainer {
+  cursor: not-allowed;
+  background-color: $field-deactivate-color;
+  &:hover {
+    border-color: $field-border-color;
+  }
+}
+.remove {
+  font-weight: bold;
+  &:hover {
+    color: $field-error-color;
+  }
+}
+.label {
+  margin-bottom: 0.5rem;
+  color: $field-label-color;
+  line-height: 1.25rem;
+  padding-left: 1px;
+  font-size: 0.875rem;
+}
+
+.formBuilderViewTwo {
+  .viewContent {
+    border-radius: 12px;
+  }
+  .deleteIcon {
+    right: 6.5rem;
+    bottom: 1rem;
+    transform: translateX(50%);
+  }
+  .addNewItem {
+    color: var(--theme-color);
+    line-height: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-right: 1rem;
+  }
+}
+.scroll {
+  overflow-y: auto;
+  max-height: 60vh;
+}
+.customizationFont {
+  font-size: 0.875rem;
+}
+
+.conditionsContainer {
+  border: 1px solid $field-border-color;
+  border-radius: 10px;
+  padding-top: 1rem;
+}
+
+.actionIcons {
+  width: 5rem;
+  justify-content: flex-start;
+}
+
+.trueLabel {
+  margin-right: 10px !important;
+}
+
+.accWorkflowBtns {
+  display: flex;
+  height: 2.5rem;
+}
+
+.cultureDropdown {
+  width: 13.5rem;
+}

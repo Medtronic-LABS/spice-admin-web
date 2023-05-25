@@ -1,0 +1,157 @@
+@import '../../styles/variables';
+$disable-btn-clr: #777;
+$hover-background: var(--medium-blue-3);
+$border-btn: #ddd;
+$total-pages-color: #333;
+$text-color: var(--black);
+
+.pagination {
+  display: flex;
+  align-items: center;
+  color: $text-color;
+  .icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  .pageNo {
+    padding: 5px 10px;
+    background: var(--theme-color);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  .MuiIconButton-root {
+    color: var(--theme-color);
+  }
+
+  .paginationWrapper {
+    margin: 0 auto;
+    margin-right: 0;
+    display: inline-flex;
+    align-items: center;
+    @media (max-width: 991px) {
+      width: 100%;
+      margin-left: 0;
+      justify-content: flex-end;
+    }
+    .paginationButton:hover {
+      background: $hover-background;
+    }
+    li:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+    li:last-child {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    li {
+      list-style: none;
+      display: inline-block;
+      border: 1px solid $border-btn;
+      margin-left: -1px;
+      background-color: var(--white);
+      &.active {
+        border: 1px solid var(--theme-color);
+        button {
+          color: var(--white);
+          background-color: var(--theme-color);
+          cursor: default;
+        }
+      }
+      &.disabled {
+        button {
+          cursor: not-allowed;
+        }
+        img {
+          cursor: not-allowed;
+        }
+      }
+
+      &.fl {
+        margin: 0 10px;
+      }
+    }
+    & > li > button {
+      padding: 2px 5px;
+    }
+    .cursorNotAllowed {
+      .paginationButton {
+        cursor: not-allowed;
+        &:hover {
+          background-color: var(--white);
+        }
+      }
+    }
+    .paginationButton {
+      outline: none;
+      cursor: pointer;
+      color: var(--theme-color);
+      padding: 6px 12px;
+      font-size: 15px;
+    }
+    .active {
+      .paginationButton {
+        background: var(--theme-color);
+        color: var(--white) !important;
+      }
+    }
+    .disabled {
+      color: $disable-btn-clr !important;
+      cursor: not-allowed;
+      &:hover {
+        background-color: var(--white);
+      }
+    }
+  }
+}
+
+.selectEl {
+  width: 4.5rem;
+}
+
+.totalPage {
+  color: $text-color;
+  // flex-grow: 1;
+}
+.count {
+  color: $text-color;
+  align-items: center;
+  display: flex;
+}
+
+.goToPage {
+  border: 0.5px solid $field-border-color;
+  border-radius: 0.187rem;
+  padding: 0.5rem;
+  color: $field-text-color;
+  height: 2.125rem;
+  width: 5rem;
+  &:hover {
+    border-color: $field-focus-border-color;
+  }
+  &:focus {
+    box-shadow: inset 0px 4px 8px $field-focus-box-shadow-color;
+    border-color: $field-focus-border-color;
+    outline: none;
+  }
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $field-placeholder-color;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $field-placeholder-color;
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $field-placeholder-color;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: $field-placeholder-color;
+  }
+  &.error {
+    border-color: $field-error-color;
+  }
+}

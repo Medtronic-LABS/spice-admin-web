@@ -1,0 +1,34 @@
+@import 'styles/variables';
+
+// Import Bootstrap and its default variables
+@import './styles/bootstrapOverrides';
+
+@import '~bootstrap/scss/bootstrap';
+@import 'styles/theme';
+
+@import 'react-toastify/dist/ReactToastify.css';
+@import 'styles/toastoverrides';
+
+@import 'styles/selectOverrides';
+
+@font-face {
+  font-family: 'AppFont';
+  src: url('./assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2'),
+    url('./assets/fonts/Inter-Regular.woff2') format('woff2'); /* for older browsers */
+  font-weight: 100 900;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: AppFont, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  margin: 0;
+}
+:root {
+  font-size: 16px;
+}

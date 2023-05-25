@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+
+.togglePassword {
+  position: relative;
+  .eyeIcon {
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 2.5rem;
+  }
+  .tickIcon {
+    position: absolute;
+    right: 2.7rem;
+    top: 2.5rem;
+  }
+}
+
+.loginPage {
+  background-color: $primary-background;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 0 1rem 2.875rem;
+  .loginFormContainer {
+    max-width: 20rem;
+    width: 100%;
+    .brand {
+      margin-top: 4rem;
+      margin-bottom: 2.5rem;
+    }
+    .forgotPassword {
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .loginTitle {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .passwordBox {
+      padding-right: 5rem;
+    }
+    .backToLoginFooter {
+      bottom: 0;
+      color: var(--primary-btn-background);
+      cursor: pointer;
+      margin-top: 20px;
+      position: sticky;
+      text-align: center;
+      top: 100%;
+      width: 100%;
+    }
+  }
+}
