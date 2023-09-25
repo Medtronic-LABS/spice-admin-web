@@ -34,6 +34,11 @@ const PrivacyPolicy = () => {
             a link from this Application.
           </p>
           <p>
+            The full list of regulations that SPICE complies with is as follows: General Data Protection
+            Regulation (GDPR) Kenya Data Protection Act, 2019 Ghana Data Protection Act, 2012 Tanzania
+            Personal Data Protection Act, 2022.
+          </p>
+          <p>
             The Applications are owned and operated by MEDTRONIC LABS. MEDTRONIC LABS is the name we use to refer to our
             whole business, including MEDTRONIC LABS PBC and any of the companies that it controls, such as its
             subsidiaries and affiliates. When we use the words "we" or "our," we mean MEDTRONIC LABS. The information we
